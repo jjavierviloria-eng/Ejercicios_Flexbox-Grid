@@ -1,0 +1,114 @@
+body{
+  background:#0f172a;
+  color:white;
+  font-family:Arial;
+  margin:0;
+}
+
+.titulo{text-align:center;padding:20px;}
+
+section{
+  margin:20px;
+  padding:15px;
+  background:#1e293b;
+  border-radius:10px;
+}
+
+/* CUADRADOS */
+.box,.gbox{
+  width:60px;
+  height:60px;
+  background:#3b82f6;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:5px;
+  border-radius:8px;
+}
+
+/* RECTANGULOS */
+.rect,.grect{
+  width:100px;
+  height:60px;
+  background:#2563eb;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:5px;
+  border-radius:8px;
+}
+
+.flex{
+  display:flex;
+  background:#020617;
+  padding:10px;
+  margin-top:10px;
+  height:120px;
+}
+
+/* JUSTIFY */
+.jc-start{justify-content:flex-start;}
+.jc-end{justify-content:flex-end;}
+.jc-center{justify-content:center;}
+.jc-between{justify-content:space-between;}
+.jc-around{justify-content:space-around;}
+.jc-evenly{justify-content:space-evenly;}
+
+/* ALIGN ITEMS */
+.ai-start{align-items:flex-start;}
+.ai-end{align-items:flex-end;}
+.ai-center{align-items:center;}
+.ai-stretch{align-items:stretch;}
+
+/* DIRECTION */
+.row{flex-direction:row;}
+.row-reverse{flex-direction:row-reverse;}
+.column{flex-direction:column;}
+.column-reverse{flex-direction:column-reverse;}
+
+/* WRAP */
+.nowrap{flex-wrap:nowrap;}
+.wrap{flex-wrap:wrap;}
+.wrap-reverse{flex-wrap:wrap-reverse;}
+.wrap-demo{width:200px;}
+
+/* ALIGN CONTENT */
+.big{height:200px;}
+.ac-start{align-content:flex-start;}
+.ac-center{align-content:center;}
+.ac-between{align-content:space-between;}
+
+/* AVANZADO */
+.o1{order:1;}
+.o2{order:2;}
+.o3{order:3;}
+.self{align-self:flex-end;}
+.grow{flex-grow:2;}
+.shrink{flex-shrink:2;}
+
+/* GRID */
+.grid{
+  display:grid;
+  background:#020617;
+  padding:10px;
+  margin-top:10px;
+}
+
+.g2{grid-template-columns:repeat(2,1fr);}
+.rows{grid-template-rows:100px 100px;}
+.gap{gap:20px;}
+
+.span{grid-column:span 2;}
+
+.areas{
+  grid-template-columns:1fr 2fr;
+  grid-template-areas:
+  "header header"
+  "sidebar content"
+  "footer footer";
+}
+
+.header{grid-area:header;}
+.sidebar{grid-area:sidebar;}
+.content{grid-area:content;}
+.footer{grid-area:footer;}

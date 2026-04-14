@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox & Grid Completo</title>
+<link rel="stylesheet" href="flexbox-grid.css">
+</head>
+<body>
+
+<h1 class="titulo">Flexbox & Grid</h1>
+
+<!-- FLEXBOX -->
+<h2>Flexbox</h2>
+
+<!-- 1-6 JUSTIFY -->
+<section>
+<h3>1-6 justify-content</h3>
+
+<div class="flex jc-start"><div class="box">1</div><div class="rect">2</div></div>
+<div class="flex jc-end"><div class="box">A</div><div class="rect">B</div></div>
+<div class="flex jc-center"><div class="box">X</div><div class="rect">Y</div></div>
+<div class="flex jc-between"><div class="box">1</div><div class="box">2</div><div class="rect">3</div></div>
+<div class="flex jc-around"><div class="box">A</div><div class="box">B</div></div>
+<div class="flex jc-evenly"><div class="box">X</div><div class="box">Y</div></div>
+</section>
+
+<!-- 7-10 ALIGN ITEMS -->
+<section>
+<h3>7-10 align-items</h3>
+
+<div class="flex ai-start"><div class="box">1</div><div class="rect">2</div></div>
+<div class="flex ai-end"><div class="box">A</div><div class="rect">B</div></div>
+<div class="flex ai-center"><div class="box">X</div><div class="rect">Y</div></div>
+<div class="flex ai-stretch"><div class="box">S</div><div class="rect">T</div></div>
+</section>
+
+<!-- 11-14 DIRECTION -->
+<section>
+<h3>11-14 flex-direction</h3>
+
+<div class="flex row"><div class="box">1</div><div class="rect">2</div></div>
+<div class="flex row-reverse"><div class="box">A</div><div class="rect">B</div></div>
+<div class="flex column"><div class="box">X</div><div class="rect">Y</div></div>
+<div class="flex column-reverse"><div class="box">M</div><div class="rect">N</div></div>
+</section>
+
+<!-- 15-17 WRAP -->
+<section>
+<h3>15-17 flex-wrap</h3>
+
+<div class="flex nowrap wrap-demo">
+  <div class="box">1</div><div class="rect">2</div><div class="box">3</div>
+</div>
+
+<div class="flex wrap wrap-demo">
+  <div class="box">A</div><div class="rect">B</div><div class="box">C</div>
+</div>
+
+<div class="flex wrap-reverse wrap-demo">
+  <div class="box">X</div><div class="rect">Y</div><div class="box">Z</div>
+</div>
+</section>
+
+<!-- 18-20 ALIGN CONTENT -->
+<section>
+<h3>18-20 align-content</h3>
+
+<div class="flex wrap ac-start big">
+  <div class="box">1</div><div class="rect">2</div><div class="box">3</div>
+</div>
+
+<div class="flex wrap ac-center big">
+  <div class="box">A</div><div class="rect">B</div><div class="box">C</div>
+</div>
+
+<div class="flex wrap ac-between big">
+  <div class="box">X</div><div class="rect">Y</div><div class="box">Z</div>
+</div>
+</section>
+
+<!-- 21-24 AVANZADO -->
+<section>
+<h3>21-24 avanzado</h3>
+
+<div class="flex">
+  <div class="box o1">1</div>
+  <div class="rect o3">2</div>
+  <div class="box o2">3</div>
+</div>
+
+<div class="flex">
+  <div class="box">A</div>
+  <div class="rect self">B</div>
+</div>
+
+<div class="flex">
+  <div class="box grow">G</div>
+  <div class="rect">R</div>
+</div>
+
+<div class="flex">
+  <div class="box shrink">S</div>
+  <div class="rect">N</div>
+</div>
+</section>
+
+<!-- GRID -->
+<h2>Grid</h2>
+
+<section>
+<h3>25 display grid</h3>
+<div class="grid"><div class="gbox">1</div><div class="gbox">2</div></div>
+</section>
+
+<section>
+<h3>26 columns</h3>
+<div class="grid g2"><div class="gbox">A</div><div class="gbox">B</div></div>
+</section>
+
+<section>
+<h3>27 rows</h3>
+<div class="grid rows"><div class="gbox">X</div><div class="gbox">Y</div></div>
+</section>
+
+<section>
+<h3>28 gap</h3>
+<div class="grid g2 gap"><div class="gbox">1</div><div class="gbox">2</div></div>
+</section>
+
+<section>
+<h3>29 grid-column</h3>
+<div class="grid g2">
+  <div class="grect span">A</div>
+  <div class="gbox">B</div>
+</div>
+</section>
+
+<section>
+<h3>30 grid-template-areas</h3>
+<div class="grid areas">
+  <div class="grect header">H</div>
+  <div class="gbox sidebar">S</div>
+  <div class="grect content">C</div>
+  <div class="gbox footer">F</div>
+</div>
+</section>
+
+</body>
+</html>
