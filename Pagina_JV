@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berserk — Perfiles</title>
+  <link rel="stylesheet" href="style.ccs">
+  <link rel="icon" type="image/jpg" href="imagenes/BERSERK-LOGO.png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbar-logo">⚔ Berserk</div>
+    <div class="navbar-links">
+      <a href="Pagina_JV" class="nav-link activo">Personajes</a>
+      <a href="info.html" class="nav-link">Más Info</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-titulo">
+      <h1>Berserk</h1>
+      <p class="subtitulo">"In the name of God, impure souls of the living dead shall be banished into eternal damnation."</p>
+    </div>
+    <div class="header-info">
+      <span>Manga — Kentaro Miura</span>
+      <span>Género: Seinen — Dark Fantasy</span>
+      <span>Año: 1989 — 2021</span>
+    </div>
+  </div>
+
+  <!-- MAIN: 3 perfiles -->
+  <div class="main">
+    <h2 class="seccion-titulo">Personajes principales</h2>
+
+    <div class="cards-container">
+
+      <!-- Tarjeta 1: Guts -->
+      <div class="card card-guts">
+        <div class="foto" onclick="toggleGif(this)">
+          <img class="img-personaje" src="imagenes/V38-Guts-Manga.webp" alt="Guts — El Espadachín Negro" />
+          <div class="gif-overlay">
+            <img class="gif-img" src="imagenes/youtube-video-gif.gif" alt="Guts gif" />
+          </div>
+        </div>
+        <div class="cuerpo">
+          <div class="rol">Protagonista</div>
+          <div class="nombre">Guts</div>
+          <div class="bio">
+            El Espadachín Negro. Nacido de una madre muerta, forjado en la guerra,
+            traicionado por su única familia. Carga la Marca del Sacrificio y jura
+            venganza contra el destino mismo.
+          </div>
+          <a href="https://berserk.fandom.com/es/wiki/Guts" target="_blank" rel="noopener noreferrer" class="link-bio">Leer más →</a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Femto -->
+      <div class="card card-femto">
+        <div class="foto" onclick="toggleGif(this)">
+          <img class="img-personaje" src="imagenes/ad7f89734f1014b8a2aa904ff0328136.jpg" alt="Femto — El Ángel Caído" />
+          <div class="gif-overlay">
+            <img class="gif-img" src="imagenes/griffith-berserk.gif" alt="Femto gif" />
+          </div>
+        </div>
+        <div class="cuerpo">
+          <div class="rol">Antagonista</div>
+          <div class="nombre">Femto/Griffith</div>
+          <div class="bio">
+            Antes conocido como Griffith, líder carismático de la Banda del Halcón.
+            Sacrificó a sus compañeros para renacer como el Quinto Apóstol de la Mano de Dios. La traición hecha Dios.
+          </div>
+          <a href="https://berserk.fandom.com/es/wiki/Griffith" target="_blank" rel="noopener noreferrer" class="link-bio">Leer más →</a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Skull Knight -->
+      <div class="card card-skull">
+        <div class="foto" onclick="toggleGif(this)">
+          <img class="img-personaje" src="imagenes/0edbca6bc35d4a735e9779ab1457af60.jpg" alt="Skull Knight — El Rey Esqueleto" />
+          <div class="gif-overlay">
+            <img class="gif-img" src="imagenes/ezgif-17826cd07b477ac5.gif" alt="Skull Knight gif" />
+          </div>
+        </div>
+        <div class="cuerpo">
+          <div class="rol">Misterioso aliado</div>
+          <div class="nombre">Skull Knight</div>
+          <div class="bio">
+            El Rey Esqueleto. Un guerrero que ya cruzó el umbral de la muerte
+            y regresó. Lleva siglos combatiendo contra la Mano de Dios, y es quizás
+            el único que comprende la verdad del mundo.
+          </div>
+          <a href="https://berserk.fandom.com/es/wiki/Caballero_de_la_Calavera" target="_blank" rel="noopener noreferrer" class="link-bio">Leer más →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER: info de contacto -->
+  <div class="footer">
+    <div class="footer-titulo">Contacto</div>
+    <div class="contacto-info">
+      <div class="contacto-item">
+        <div class="label">Email</div>
+        <div class="valor">Berserk@gmail.com</div>
+      </div>
+      <div class="contacto-item">
+        <div class="label">Teléfono</div>
+        <div class="valor">+57 300 000 0000</div> 
+      </div>
+      <div class="contacto-item">
+        <div class="label">Redes</div>
+        <div class="valor">@berserk_wiki</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleGif(fotoDiv) {
+      const overlay = fotoDiv.querySelector('.gif-overlay');
+      const yaActivo = overlay.classList.contains('activo');
+
+      // cerrar todos los otros primero
+      document.querySelectorAll('.gif-overlay.activo').forEach(el => {
+        el.classList.remove('activo');
+      });
+
+      // si no estaba activo, abrirlo
+      if (!yaActivo) {
+        overlay.classList.add('activo');
+      }
+    }
+  </script>
+
+</body>
+</html>

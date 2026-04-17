@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berserk — Más Info</title>
+  <link rel="stylesheet" href="style.ccs">
+  <link rel="icon" type="image/jpg" href="imagenes/BERSERK-LOGO.png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbar-logo">⚔ Berserk</div>
+    <div class="navbar-links">
+      <a href="Pagina_JV" class="nav-link">Personajes</a>
+      <a href="info-1.html" class="nav-link activo">Más Info</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-titulo">
+      <h1>Sobre Berserk</h1>
+      <p class="subtitulo">Historia, mundo y legado del manga más oscuro de todos los tiempos.</p>
+    </div>
+  </div>
+
+  <!-- LAYOUT -->
+  <div class="info-layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="sidebar-titulo">Navegación</div>
+      <a href="#historia" class="sidebar-link">📖 Historia</a>
+      <a href="#mundo"    class="sidebar-link">🌑 El Mundo</a>
+      <a href="#galeria"  class="sidebar-link">🖼 Galería</a>
+      <a href="#autor"    class="sidebar-link">✍ El Autor</a>
+      <a href="Pagina_JV" class="btn-volver">← Volver a Personajes</a>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="info-contenido">
+
+      <!-- Historia -->
+      <div class="article" id="historia">
+        <div class="article-header">📖 Historia del manga</div>
+        <div class="section">
+          <p>Berserk es un manga de fantasía oscura escrito e ilustrado por Kentaro Miura.
+            Comenzó su publicación en 1989 en la revista Young Animal de Hakusensha.
+            Con más de 40 volúmenes publicados, se convirtió en una de las obras más influyentes del género.</p>
+          <p>Lamentablemente, Kentaro Miura falleció en mayo de 2021, dejando la serie
+            inconclusa. Desde septiembre de 2022, el estudio Gaga continúa el manga
+            basándose en las notas y bocetos que dejó el autor.</p>
+        </div>
+      </div>
+
+      <!-- El Mundo -->
+      <div class="article" id="mundo">
+        <div class="article-header">🌑 El Mundo de Berserk</div>
+        <div class="section">
+          <p>La historia se desarrolla en un mundo medieval de fantasía oscura donde los demonios,
+            llamados Apóstoles, acechan en la oscuridad y la humanidad lucha por sobrevivir.</p>
+          <div class="info-grid">
+
+            <div class="info-box">
+              <div class="info-box-titulo">El Eclipse</div>
+              <div class="info-box-texto">Ritual donde la Mano de Dios cobra almas a cambio de un deseo oscuro.</div>
+            </div>
+
+            <div class="info-box">
+              <div class="info-box-titulo">
+                La Marca
+                <button id="btn-marca" class="icono-marca" title="Activar la Marca">𒌐</button>
+              </div>
+              <div class="info-box-texto">Símbolo grabado en los sacrificados que atrae a los demonios.</div>
+              <div class="marca-respuesta" id="texto-marca">
+                Haz click en el ícono 𒌐 para activar la Marca del Sacrificio.
+              </div>
+              <audio id="audio-marca" src="imagenes/El significado de la marca del sacrificio Berserk 𒉭.mp3" preload="auto"></audio>
+            </div>
+
+            <div class="info-box">
+              <div class="info-box-titulo">El Behelit</div>
+              <div class="info-box-texto">Amuleto con forma de huevo que activa el Eclipse cuando llora.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- GALERÍA -->
+      <div class="article" id="galeria">
+        <div class="article-header">🖼 Galería</div>
+        <div class="section">
+
+          <div class="carrusel-wrap">
+
+            <!-- Flecha izquierda -->
+            <button class="carrusel-flecha carrusel-flecha-izq" onclick="moverCarrusel(-1)">&#8592;</button>
+
+            <!-- Las 3 imágenes visibles -->
+            <div class="carrusel-pista">
+
+              <!-- Imagen IZQUIERDA (borrosa) -->
+              <div class="c-slide c-lateral c-izq" id="slide-izq">
+                <img id="img-izq" src="" alt="" />
+              </div>
+
+              <!-- Imagen CENTRAL (nítida — click abre lightbox) -->
+              <div class="c-slide c-centro" id="slide-centro" onclick="abrirLightbox()">
+                <img id="img-centro" src="" alt="" />
+                <div class="c-hint">🔍 click para ampliar</div>
+              </div>
+
+              <!-- Imagen DERECHA (borrosa) -->
+              <div class="c-slide c-lateral c-der" id="slide-der">
+                <img id="img-der" src="" alt="" />
+              </div>
+
+            </div>
+
+            <!-- Flecha derecha -->
+            <button class="carrusel-flecha carrusel-flecha-der" onclick="moverCarrusel(1)">&#8594;</button>
+
+          </div>
+
+          <!-- Título debajo + contador -->
+          <div class="carrusel-pie">
+            <div class="carrusel-pie-titulo" id="c-titulo"></div>
+            <div class="carrusel-pie-contador" id="c-contador"></div>
+          </div>
+
+          <!-- ═══════════════════════════════════════════
+               IMÁGENES OCULTAS
+               ═══════════════════════════════════════════ -->
+          <div id="datos-carrusel" style="display:none">
+
+            <div class="dato"
+              data-src="imagenes/Zodd_wyald.webp"
+              data-titulo="Guts vs. Zodd en el Castillo"
+              data-desc="En las ruinas del Castillo de Doldrey, Guts se enfrenta por primera vez a Nosferatu Zodd, un legendario Apóstol que lleva siglos en el campo de batalla. La pelea casi le cuesta la vida a Guts, quien descubre que la fuerza bruta no es suficiente contra un ser de esa magnitud. Zodd, al ver el Behelit de Griffith, reconoce la señal y se retira con una advertencia siniestra sobre el destino del portador.">
+            </div>
+
+            <div class="dato"
+              data-src="imagenes/6980f635abc564b529a5484ef60202c6.jpg"
+              data-titulo="La Traición de Griffith"
+              data-desc="Durante el Eclipse, Griffith usa el Behelit del Rey de los Reyes para invocar a la Mano de Dios. Al pronunciar su deseo de poseer su propio reino, sacrifica a todos los miembros de la Banda del Halcón como ofrendas a los demonios. Guts y Casca son los únicos sobrevivientes gracias a la intervención de Skull Knight. Este momento marca el punto de quiebre absoluto de la historia.">
+            </div>
+
+            <div class="dato"
+              data-src="imagenes/48c67359bf246838cc0d65771c0dfb32.jpg"
+              data-titulo="Nacimiento de Femto"
+              data-desc="Griffith, consumido por la ambición y el resentimiento, acepta el precio del Eclipse: la vida de sus compañeros. En ese momento abandona su forma humana y renace como Femto, el Quinto de la Mano de Dios. Su cuerpo se transforma en una entidad alada de oscuridad pura, sin rastro alguno de la humanidad que alguna vez poseyó. Es el momento más oscuro y devastador de toda la saga.">
+            </div>
+
+            <div class="dato"
+              data-src="imagenes/e910206a5e35458d8b4a78b282a5fdd1.jpg"
+              data-titulo="Femto vs Skull Knight & Zodd"
+              data-desc="En uno de los enfrentamientos más cargados de simbolismo del manga, Femto se enfrenta a Skull Knight y al propio Zodd. El Caballero intenta usar su espada de Behelits acumulados para herir a Femto, pero este desvía el golpe hacia el espacio-tiempo, desencadenando sin querer el retorno del mundo astral al mundo físico.">
+            </div>
+
+            <div class="dato"
+              data-src="imagenes/2ea30dfd4d890fefff15d2a75457a354.jpg"
+              data-titulo="La Armadura Berserk"
+              data-desc="Skull Knight le entrega a Guts la Armadura Berserk, una reliquia maldita forjada para llevar a su portador al límite absoluto del combate. La armadura suprime el dolor, ignora las heridas y libera la furia más profunda del usuario. Su precio es brutal: cada vez que Guts la usa, la armadura consume su cuerpo desde adentro, causando daños irreversibles en huesos y músculos.">
+            </div>
+
+            <div class="dato"
+              data-src="imagenes/7001f313d2b596e9190e42dc42bf5ec4.jpg"
+              data-titulo="El Precio de la Armadura"
+              data-desc="Después de usar la Armadura Berserk en combate prolongado, el cuerpo de Guts queda devastado. Sus huesos se fracturan y la armadura los suelda con metal al rojo vivo para que pueda seguir peleando. Al quitarse la armadura, Guts aparece cubierto de sangre, con heridas que un humano normal no podría sobrevivir. Esta imagen resume la esencia de Berserk: la voluntad humana empujada más allá de sus límites.">
+            </div>
+
+          </div>
+          <!-- FIN datos-carrusel -->
+
+        </div>
+      </div>
+
+      <!-- Autor -->
+      <div class="article" id="autor">
+        <div class="article-header">✍ Kentaro Miura</div>
+        <div class="section">
+          <p>Kentaro Miura nació el 11 de julio de 1966 en Chiba, Japón. Comenzó a dibujar
+            manga desde los 10 años. Berserk comenzó como un proyecto universitario y se
+            convirtió en su obra de vida, reconocida mundialmente por su arte detallado
+            y narrativa profunda.</p>
+          <p>Falleció el 6 de mayo de 2021 a los 54 años. Su legado permanece como uno
+            de los más grandes en la historia del manga.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-titulo">Contacto</div>
+    <div class="contacto-info">
+      <div class="contacto-item">
+        <div class="label">Email</div>
+        <div class="valor">Berserk@gmail.com</div>
+      </div>
+      <div class="contacto-item">
+        <div class="label">Teléfono</div>
+        <div class="valor">+57 300 000 0000</div>
+      </div>
+      <div class="contacto-item">
+        <div class="label">Redes</div>
+        <div class="valor">@berserk_wiki</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="cerrarLightbox()">
+    <div class="lightbox-contenido" onclick="event.stopPropagation()">
+      <button class="lightbox-cerrar" onclick="cerrarLightbox()">✕</button>
+      <div class="lightbox-imagen-wrap">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      </div>
+      <div class="lightbox-info">
+        <div class="lightbox-titulo" id="lightbox-titulo"></div>
+        <div class="lightbox-desc"   id="lightbox-desc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS de la marca -->
+  <script src="marca.js"></script>
+
+  <!-- JS del carrusel — sencillo con divs -->
+  <script>
+
+    // 1. Leer todos los divs con clase "dato" del HTML
+    var datos = document.querySelectorAll('.dato');
+    var total  = datos.length;
+    var actual = 0;
+
+    // 2. Función que calcula índice circular (evita salirse del rango)
+    function circular(n) {
+      return (n + total) % total;
+    }
+
+    // 3. Función principal: actualiza las 3 imágenes visibles
+    function actualizarCarrusel() {
+
+      var izq    = datos[circular(actual - 1)];
+      var centro = datos[actual];
+      var der    = datos[circular(actual + 1)];
+
+      // Poner las imágenes
+      document.getElementById('img-izq').src    = izq.dataset.src;
+      document.getElementById('img-centro').src = centro.dataset.src;
+      document.getElementById('img-der').src    = der.dataset.src;
+
+      // Poner el título y contador debajo
+      document.getElementById('c-titulo').innerText   = centro.dataset.titulo;
+      document.getElementById('c-contador').innerText = (actual + 1) + ' / ' + total;
+    }
+
+    // 4. Función para mover el carrusel (dir = -1 o +1)
+    function moverCarrusel(dir) {
+      actual = circular(actual + dir);
+      actualizarCarrusel();
+    }
+
+    // 5. Función para abrir el lightbox con la imagen central
+    function abrirLightbox() {
+      var centro = datos[actual];
+
+      document.getElementById('lightbox-img').src          = centro.dataset.src;
+      document.getElementById('lightbox-titulo').innerText = centro.dataset.titulo;
+      document.getElementById('lightbox-desc').innerText   = centro.dataset.desc;
+
+      var lb = document.getElementById('lightbox');
+      lb.classList.add('activo');
+      setTimeout(function() { lb.classList.add('visible'); }, 10);
+    }
+
+    // 6. Función para cerrar el lightbox
+    function cerrarLightbox() {
+      var lb = document.getElementById('lightbox');
+      lb.classList.remove('visible');
+      setTimeout(function() { lb.classList.remove('activo'); }, 350);
+    }
+
+    // 7. Teclas del teclado
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft')  moverCarrusel(-1);
+      if (e.key === 'ArrowRight') moverCarrusel(1);
+      if (e.key === 'Escape')     cerrarLightbox();
+    });
+
+    // 8. Arrancar el carrusel al cargar la página
+    actualizarCarrusel();
+
+  </script>
+
+</body>
+</html>
